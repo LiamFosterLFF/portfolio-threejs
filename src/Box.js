@@ -16,7 +16,16 @@ const Box = (props) => {
     }
     useFrame((state, delta) => {
         if (keysPressed["ArrowUp"]) {
+            (mesh.current.rotation.x -= .01)
+        }
+        if (keysPressed["ArrowDown"]) {
             (mesh.current.rotation.x += .01)
+        }
+        if (keysPressed["ArrowRight"]) {
+            (mesh.current.rotation.y += .01)
+        }
+        if (keysPressed["ArrowLeft"]) {
+            (mesh.current.rotation.y -= .01)
         }
     })
 
